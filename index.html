@@ -34,7 +34,7 @@
                 <tbody>
                     <tr id="MacnCheese">
                         <td>Mac nCheese</td>
-                        <td class="price">$2.99</td>
+                        <td class="price">$3.00</td>
                         <td>Description</td>
                         <td><input type="number" name="" id="" class="form-control quantity"></td>
                         <td><input type="button" value="Buy" class="btn btn-primary" onclick="buy('Mac nCheese')"></td>
@@ -48,21 +48,21 @@
                    </tr>
                    <tr id="Cereal">
                        <td>Cereal</td>
-                       <td class="price">$6.99</td>
+                       <td class="price">$7.00</td>
                        <td>Description</td>
                        <td><input type="number" name="" id="" class="form-control quantity"></td>
                        <td><input type="button" value="Buy" class="btn btn-primary" onclick="buy('Cereal')"></td>
                    </tr>
                    <tr id="PotatoChips">
                        <td>Potato Chips</td>
-                       <td class="price">$3.99</td>
+                       <td class="price">$4.00</td>
                        <td>Description</td>
                        <td><input type="number" name="" id="" class="form-control quantity"></td>
                        <td><input type="button" value="Buy" class="btn btn-primary" onclick="buy('Potato Chips')"></td>
                    </tr>
                    <tr id="Steak">
                        <td>Steak</td>
-                       <td class="price">$15.99</td>
+                       <td class="price">$16.00</td>
                        <td>Description</td>
                        <td><input type="number" name="" id="" class="form-control quantity"></td>
                        <td><input type="button" value="Buy" class="btn btn-primary" onclick="buy('Steak')"></td>
@@ -78,11 +78,18 @@
                     <th>Price</th>
                     <!--The price is stored in this table^ how do i get them all?-->
                     <th>Quantity</th>
+                    <th>Subtotal</th>
                 </thead>
                 <tbody>
 
                 </tbody>
             </table>
+            <div class="row">
+                <div class="col align-right">
+                    <p id="total"> </p>
+                </div>
+            </div>
+
             <button class="btn btn-secondary" onclick="checkout()">Checkout</button>
 
         </div> 

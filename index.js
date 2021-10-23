@@ -1,5 +1,4 @@
 function buy(name){
-    debugger;
     //append to a table
     //find the element that matches this condition (i.e a tbody element of another element with id cart)
     let cart = document.querySelector('#cart tbody');
@@ -20,12 +19,25 @@ function buy(name){
     itemQuantity.innerHTML = document.querySelector(elementId+' td .quantity').value;
     //does the .quantity & .price syntax get the last string from the class name?
 
+    let subTotal = newItem.insertCell(3);
+    subTotal.innerHTML = '$' + (itemPrice.innerHTML.replace('$','') * itemQuantity.innerHTML);
+
     
     let priceInString = itemPrice.innerHTML.replace('$','');
     //priceInString Currently has the number, need to add it in a loop or database
-    alert(Number(priceInString));
+    //alert(Number(priceInString));
 
     document.querySelector(elementId+' td .quantity').value = '';
+
+    //calculate the total
+    let total = 0;
+    document.querySelectorAll('#cart tbody tr').forEach(row =>{
+        total = total + parseInt(row.cells[3].innerHTML.replace('$',''));
+        //total = total + parseFloat(row.cells[3].innerHTML.replace('$','').toFixed(2));
+        //will use parsefloat instead of parseInt() to see if i can get cents
+        //convert the subtotal to an int using parseInt
+    });
+    document.querySelector('#total').innerHTML = '$' + total;
 
 }
 
@@ -35,7 +47,8 @@ function checkout(){
 
     //here we will loop over the columns in Price and try to add them up or store them in a variable
     //var table1 = document.getElementById("Price");
-    
+
+    document.querySelector('#total').innerHTML = '';
 
 
     alert("Thanks for buying! BRUH");
