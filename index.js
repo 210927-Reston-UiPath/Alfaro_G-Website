@@ -51,7 +51,7 @@ function checkout(){
     document.querySelector('#total').innerHTML = '';
 
 
-    alert("Thanks for buying! BRUH");
+    //alert("Thanks for buying! BRUH");
     //need to read info from here?
 
 }
